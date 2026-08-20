@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --vgs-red: #f04444;
-  --vgs-red-dark: #d43737;
+  --vgs-red: #c4272c;
+  --vgs-red-dark: #9c1f23;
 
   --vgs-black: #161616;
   --vgs-dark-grey: #262626;
