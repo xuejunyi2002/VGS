@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import DecorativeShape from "./DecorativeShape";
-import PlaceholderArt from "./PlaceholderArt";
+import KaijuPeek from "./KaijuPeek";
 
 export default function Hero() {
   const artRef = useRef<HTMLDivElement>(null);
@@ -24,13 +24,13 @@ export default function Hero() {
 
   return (
     <section
-      className="relative overflow-hidden border-b-2 border-vgs-black px-5 pb-16 pt-10 sm:px-8 sm:pt-14 lg:min-h-[90vh]"
+      className="relative overflow-hidden border-b-2 border-vgs-black bg-glow-cream px-5 pb-16 pt-10 sm:px-8 sm:pt-14 lg:min-h-[90vh]"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 texture-halftone opacity-[0.05]"
+        className="pointer-events-none absolute inset-0 texture-halftone opacity-[0.07]"
       />
 
       <div className="mx-auto flex max-w-7xl items-center justify-between text-xs font-bold uppercase tracking-[0.2em] text-vgs-grey">
@@ -64,26 +64,26 @@ export default function Hero() {
         </div>
 
         <div className="relative z-10 lg:col-span-5">
-          <div ref={artRef} className="transition-transform duration-150 ease-out">
-            <PlaceholderArt
-              label="VGS character artwork"
-              tone="red"
-              aspect="aspect-[3/4]"
-              rotate={-2}
-              className="mx-auto max-w-sm"
-            />
+          <div ref={artRef} className="relative mx-auto max-w-sm transition-transform duration-150 ease-out">
+            <KaijuPeek className="mx-auto w-full drop-shadow-[6px_10px_0_rgba(22,22,22,0.08)]" />
           </div>
           <DecorativeShape
             kind="tag"
             label="NEW!"
             rotate={-6}
-            className="absolute -left-2 -top-4 sm:left-2"
+            className="absolute left-2 top-0 sm:left-6"
           />
           <DecorativeShape
             kind="sparkle"
             color="blue"
             rotate={12}
-            className="absolute -bottom-3 -right-1"
+            className="absolute right-2 top-6"
+          />
+          <DecorativeShape
+            kind="star"
+            color="yellow"
+            rotate={-10}
+            className="absolute bottom-4 left-0"
           />
         </div>
       </div>

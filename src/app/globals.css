@@ -77,6 +77,33 @@ body {
   box-shadow: 2px 2px 0 var(--vgs-black);
 }
 
+/* Soft radial atmosphere behind hero/character art, evoking illustrated backdrops */
+.bg-glow-cream {
+  background:
+    radial-gradient(60% 60% at 72% 38%, rgba(240, 68, 68, 0.16) 0%, rgba(240, 68, 68, 0) 70%),
+    radial-gradient(45% 45% at 20% 15%, rgba(255, 217, 74, 0.18) 0%, rgba(255, 217, 74, 0) 70%),
+    var(--vgs-cream);
+}
+
+.bg-glow-red {
+  background:
+    radial-gradient(55% 65% at 70% 30%, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0) 70%),
+    radial-gradient(60% 70% at 15% 85%, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0) 70%),
+    var(--vgs-red);
+}
+
+/* Chunky outlined "poster" title treatment, cream fill with a hard black outline */
+.text-poster {
+  color: var(--vgs-cream);
+  -webkit-text-stroke: 3px var(--vgs-black);
+  paint-order: stroke fill;
+  text-shadow:
+    3px 3px 0 var(--vgs-black),
+    -3px 3px 0 var(--vgs-black),
+    3px -3px 0 var(--vgs-black),
+    -3px -3px 0 var(--vgs-black);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
