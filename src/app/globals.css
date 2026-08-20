@@ -29,7 +29,7 @@
   --color-vgs-yellow: var(--vgs-yellow);
   --color-vgs-blue: var(--vgs-blue);
 
-  --font-display: var(--font-archivo-black), "League Spartan", "Anton", sans-serif;
+  --font-display: var(--font-lilita-one), "Baloo 2", "Archivo Black", sans-serif;
   --font-sans: var(--font-inter), "Geist", "Space Grotesk", sans-serif;
 }
 
@@ -60,36 +60,6 @@ body {
 
 .font-display {
   font-family: var(--font-display);
-}
-
-/* Subtle halftone texture, used sparingly and never over body text */
-.texture-halftone {
-  background-image: radial-gradient(var(--vgs-black) 1px, transparent 1px);
-  background-size: 10px 10px;
-}
-
-/* Comic-style hard shadow used by buttons and framed art */
-.shadow-comic {
-  box-shadow: 4px 4px 0 var(--vgs-black);
-}
-
-.shadow-comic-sm {
-  box-shadow: 2px 2px 0 var(--vgs-black);
-}
-
-/* Soft radial atmosphere behind hero/character art, evoking illustrated backdrops */
-.bg-glow-cream {
-  background:
-    radial-gradient(60% 60% at 72% 38%, rgba(240, 68, 68, 0.16) 0%, rgba(240, 68, 68, 0) 70%),
-    radial-gradient(45% 45% at 20% 15%, rgba(255, 217, 74, 0.18) 0%, rgba(255, 217, 74, 0) 70%),
-    var(--vgs-cream);
-}
-
-.bg-glow-red {
-  background:
-    radial-gradient(55% 65% at 70% 30%, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0) 70%),
-    radial-gradient(60% 70% at 15% 85%, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0) 70%),
-    var(--vgs-red);
 }
 
 /* Chunky outlined "poster" title treatment, cream fill with a hard black outline */

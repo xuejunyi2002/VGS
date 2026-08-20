@@ -21,7 +21,7 @@ export default function TrailerBlock() {
   const embedUrl = game.trailerUrl ? getYoutubeEmbedUrl(game.trailerUrl) : null;
 
   return (
-    <div id="trailer" className="relative aspect-video w-full border-2 border-vgs-black bg-vgs-black shadow-comic">
+    <div id="trailer" className="relative aspect-video w-full bg-vgs-black">
       {playing && embedUrl ? (
         <iframe
           className="h-full w-full"
@@ -38,14 +38,10 @@ export default function TrailerBlock() {
           disabled={!embedUrl}
           className="group flex h-full w-full flex-col items-center justify-center gap-4 text-vgs-cream disabled:cursor-default"
         >
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 texture-halftone opacity-[0.06]"
-          />
-          <span className="relative flex h-16 w-16 items-center justify-center rounded-full border-2 border-vgs-cream bg-vgs-red transition-transform duration-150 ease-out group-enabled:group-hover:scale-110">
-            <span className="ml-1 h-0 w-0 border-y-[10px] border-l-[16px] border-y-transparent border-l-vgs-cream" />
+          <span className="flex h-14 w-14 items-center justify-center rounded-full bg-vgs-red transition-transform duration-150 ease-out group-enabled:group-hover:scale-110">
+            <span className="ml-1 h-0 w-0 border-y-[9px] border-l-[14px] border-y-transparent border-l-vgs-cream" />
           </span>
-          <span className="relative font-display text-sm uppercase tracking-[0.2em]">
+          <span className="font-display text-sm uppercase tracking-[0.2em]">
             {embedUrl ? "Watch Trailer" : "Trailer coming soon"}
           </span>
         </button>

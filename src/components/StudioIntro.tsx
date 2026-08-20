@@ -18,7 +18,7 @@ export default function StudioIntro({
   showTeamCta = true,
 }: StudioIntroProps) {
   return (
-    <section id={id} className="border-b-2 border-vgs-black px-5 py-20 sm:px-8 sm:py-28">
+    <section id={id} className="px-5 py-20 sm:px-8 sm:py-28">
       <div className="mx-auto max-w-7xl">
         <SectionLabel>{label}</SectionLabel>
 

@@ -10,12 +10,12 @@ type CTAButtonProps = {
 };
 
 const base =
-  "inline-flex items-center gap-2 border-2 border-vgs-black px-5 py-3.5 text-sm font-bold uppercase tracking-wide transition-transform duration-150 ease-out hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] active:shadow-comic-sm";
+  "inline-flex items-center gap-2 px-6 py-3.5 text-sm font-bold uppercase tracking-wide transition-colors duration-150 ease-out";
 
 const variants: Record<NonNullable<CTAButtonProps["variant"]>, string> = {
-  primary: "bg-vgs-red text-vgs-cream shadow-comic hover:bg-vgs-red-dark",
-  secondary: "bg-vgs-cream text-vgs-black shadow-comic hover:bg-vgs-light-grey",
-  onDark: "bg-vgs-cream text-vgs-black border-vgs-black shadow-[4px_4px_0_var(--vgs-red)] hover:bg-vgs-yellow",
+  primary: "bg-vgs-red text-vgs-cream hover:bg-vgs-red-dark",
+  secondary: "border border-vgs-black text-vgs-black hover:bg-vgs-black hover:text-vgs-cream",
+  onDark: "border border-vgs-cream text-vgs-cream hover:bg-vgs-cream hover:text-vgs-black",
 };
 
 export default function CTAButton({

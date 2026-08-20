@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Archivo_Black, Inter } from "next/font/google";
+import { Lilita_One, Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-const archivoBlack = Archivo_Black({
-  variable: "--font-archivo-black",
+const lilitaOne = Lilita_One({
+  variable: "--font-lilita-one",
   subsets: ["latin"],
   weight: "400",
   display: "swap",
@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${archivoBlack.variable} ${inter.variable} antialiased`}>
+      <body className={`${lilitaOne.variable} ${inter.variable} antialiased`}>
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-vgs-black focus:text-vgs-cream focus:px-4 focus:py-2 focus:font-bold"
