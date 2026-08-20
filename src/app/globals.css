@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+:root {
+  --vgs-red: #f04444;
+  --vgs-red-dark: #d43737;
+
+  --vgs-black: #161616;
+  --vgs-dark-grey: #262626;
+
+  --vgs-cream: #fff9f2;
+  --vgs-white: #ffffff;
+
+  --vgs-grey: #999999;
+  --vgs-light-grey: #ebe8e3;
+
+  --vgs-yellow: #ffd94a;
+  --vgs-blue: #65c8ff;
+}
+
+@theme inline {
+  --color-vgs-red: var(--vgs-red);
+  --color-vgs-red-dark: var(--vgs-red-dark);
+  --color-vgs-black: var(--vgs-black);
+  --color-vgs-dark-grey: var(--vgs-dark-grey);
+  --color-vgs-cream: var(--vgs-cream);
+  --color-vgs-white: var(--vgs-white);
+  --color-vgs-grey: var(--vgs-grey);
+  --color-vgs-light-grey: var(--vgs-light-grey);
+  --color-vgs-yellow: var(--vgs-yellow);
+  --color-vgs-blue: var(--vgs-blue);
+
+  --font-display: var(--font-archivo-black), "League Spartan", "Anton", sans-serif;
+  --font-sans: var(--font-inter), "Geist", "Space Grotesk", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--vgs-cream);
+  color: var(--vgs-black);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--vgs-red);
+  color: var(--vgs-cream);
+}
+
+:focus-visible {
+  outline: 3px solid var(--vgs-red);
+  outline-offset: 3px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Subtle halftone texture, used sparingly and never over body text */
+.texture-halftone {
+  background-image: radial-gradient(var(--vgs-black) 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+
+/* Comic-style hard shadow used by buttons and framed art */
+.shadow-comic {
+  box-shadow: 4px 4px 0 var(--vgs-black);
+}
+
+.shadow-comic-sm {
+  box-shadow: 2px 2px 0 var(--vgs-black);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
