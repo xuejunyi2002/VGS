@@ -1,7 +1,6 @@
 import SectionLabel from "./SectionLabel";
 import CTAButton from "./CTAButton";
 import DecorativeShape from "./DecorativeShape";
-import KaijuCreature from "./KaijuCreature";
 import GameplayStrip from "./GameplayStrip";
 import TrailerBlock from "./TrailerBlock";
 import { game } from "@/lib/data";
@@ -20,22 +19,18 @@ export default function FeaturedGame() {
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 texture-halftone opacity-[0.12]"
           />
-          <div className="relative grid grid-cols-1 items-center gap-2 px-5 py-12 sm:px-10 sm:py-16 lg:grid-cols-12 lg:gap-6">
-            <h2 className="text-poster relative z-0 font-display leading-[0.9] text-[16vw] sm:text-8xl lg:col-span-7 lg:text-[8vw]">
+          <div className="relative px-5 py-14 sm:px-10 sm:py-20">
+            <h2 className="text-poster relative z-0 font-display leading-[0.9] text-[16vw] sm:text-8xl lg:text-[7vw]">
               KAIJU
               <br />
               CORP.
             </h2>
-
-            <div className="relative z-10 mx-auto -mt-4 w-full max-w-sm lg:col-span-5 lg:-mt-0 lg:ml-auto">
-              <KaijuCreature className="mx-auto w-full max-w-[280px] drop-shadow-[6px_10px_0_rgba(0,0,0,0.18)]" />
-              <DecorativeShape
-                kind="tag"
-                label="VR × PC"
-                rotate={-6}
-                className="absolute -left-2 top-0 sm:left-2"
-              />
-            </div>
+            <DecorativeShape
+              kind="tag"
+              label="VR × PC"
+              rotate={-6}
+              className="absolute right-5 top-5 sm:right-10 sm:top-10"
+            />
           </div>
         </div>
 
